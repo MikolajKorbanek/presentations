@@ -1,0 +1,47 @@
+.footnote {
+    position: absolute;
+    left: 5rem;
+    bottom: 5rem;
+    opacity: 0.3;
+}
+
+.source {
+    position: absolute;
+    bottom: 0.3rem;
+    font-size: 0.5rem;
+}
+
+.bio.myphoto {
+    width: 95%;
+}
+
+.left-column  { width: 49%; float: left; }
+.right-column { width: 49%; float: right; }
+
+.left-column-33  { width: 33%; float: left; }
+.right-column-66 { width: 66%; float: right; }
+
+.left-column-66  { width: 66%; float: left; }
+.right-column-33 { width: 33%; float: right; }
+
+.right-column ~ p { clear: both; }
+.right-column ~ ul { clear: both; }
+
+.exampleMutations {
+    width: 100%;
+    height: 75%;
+    table-layout: fixed;
+}
+
+.exampleMutations td {
+    text-align: center;
+}
+
+.exampleMutations tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.exampleMutations th {
+    background-color: black;
+    color: white;
+  }
