@@ -44,4 +44,21 @@
 .exampleMutations th {
     background-color: black;
     color: white;
-  }
+}
+
+.mutant {
+    margin: 0;
+    width: 98%;
+}
+
+.survivedMutant{
+    width: 85%;
+}
+
+.mutantFailed{
+    color: red;
+}
+
+.mutantSucceed {
+    color: green;
+}

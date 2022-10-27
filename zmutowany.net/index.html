@@ -28,6 +28,14 @@ class: center, middle
 .footnote[4Developers - 08.11.2022]
 
 ---
+class: center, middle
+
+
+# Disclaimer
+
+(a tak naprawdę dwa)
+
+---
 
 # Kim ja jestem?
 
@@ -204,11 +212,126 @@ Zacznijmy najpierw od tego jakie są rodzaje mutacji, a następnie spróbujemy o
 
 .source[Źródło: https://stryker-mutator.io/docs/stryker-net/mutations/]
 ---
+class: center, middle
 
+# To zdefinujmy sobie test mutacyjny
 
+---
+class: center, middle
 
+# To zdefinujmy sobie test mutacyjny
 
+Mutacje to drobne, ale przemyślane zmiany w kodzie, które mają sprawdzić czy nasze testy dobrze testują nasz kod.
 
+Sprawdzamy wyników - **false-positive**
+
+---
+class: center, middle
+
+# A co z pokryciem kodu?
+
+---
+class: center, middle
+
+# A co z pokryciem kodu?
+
+Sprawdzanie pokrycia kody nie powie Ci wszystkiego o efektywności twoich testów.
+
+???
+
+Wyobraźmy sobie kanapkę z dżemem. 
+
+Sprawdzanie pokrycia powie Ci, że 80% kanapki jest pokryte dżemem, a test mutacyjne powiedzą Ci, że jest to dżem truskawkowy, a nie brzoskwiniowy…
+
+---
+class: center, middle
+
+# Już prawie live coding
+Jeszcze tylko musimy sobie wytłumaczyć kilka słówek
+
+???
+
+Nie każdy to lubi, ale pozwoli nam to łatwiej przebrnąć przez demo.
+
+---
+
+# Mutant
+
+<img class="mutant" src="/assets/mutant.png" >
+
+---
+
+# Mutant
+
+Jest to po prostu zmieniona wersja kodu źródłowego.
+
+Po przepuszczeniu danych testowych przez mutanta - test powinien nam zwrócić **inne** wyniki niż oryginalny kod źródłowy.
+
+---
+
+# Survived Mutants (żywe mutanty)
+
+Są to mutanty, które wciąż żyją po uruchomieniu danych testowych przez oryginalne i zmutowane warianty kodu źródłowego. 
+
+Te muszą zostać zabite.
+
+.mutantFailed[**(Test failed)**]
+
+.center[<img class="survivedMutant" src="/assets/survivedMutants.gif">]
+
+---
+
+# Mutanty zabite
+
+Są to mutacje, które są zabijane po testowaniu mutacji. 
+
+Otrzymujemy je, gdy otrzymujemy różne wyniki z oryginalnych i zmutowanych wersji kodu źródłowego.
+
+.mutantSucceed[**(Test succeed)**]
+
+---
+
+# Mutanty równoważne
+
+Są one ściśle związane z żywymi mutantami, z tym, że, są one "żywe" nawet po uruchomieniu przez nie danych testowych. 
+
+To, co odróżnia je od innych, to fakt, że mają takie samo znaczenie jak oryginalny kod źródłowy, nawet jeśli mogą mieć inną składnię.
+
+Takie mutacje są ignorowane.
+
+---
+
+# Wynik mutacji
+
+Jest to wynik oparty na liczbie mutantów danego typu:
+
+.center[<img src="/assets/mutationScore.png"/>]
+
+Naszym celem powinno być osiągnięcie wysokiego wyniku mutacji.
+
+???
+
+Mutacje równoważne nie są brane pod uwagę przy obliczaniu wyniku mutacji. 
+
+Osiągnięcie 100% powinno być naszym calem, ale nie jest konieczne. To jak z pokryciem kodu. Im więcej tym lepiej, ale realne jest 80-90%.
+---
+class: center, middle
+
+# Więc co oznacza, że zabijamy mutanta?
+
+???
+
+Pytanie do publiki
+
+Kiedy zmieniamy część programu poprzez testy mutacyjne, tworzymy alternatywną wersję  aplikacji, która jest nazywana mutantem. 
+Następnie testy sprawdzają to, a jeśli zestaw testów odrzuca mutanta (co, mamy nadzieję, robi), mówimy, że zabił mutanta.
+
+---
+class: center, middle
+
+# DEMO
+
+---
     </textarea>
     <script src="/remark.js">
     </script>
