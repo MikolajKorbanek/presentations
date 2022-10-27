@@ -5,15 +5,16 @@
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Poppins);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
       
-      body { font-family: 'Droid Serif'; }
+      body { font-family: 'Poppins'; }
       h1, h2, h3 {
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code, .remark-inline-code { font-family: 'Poppins'; }
       
     </style>
     <link rel="stylesheet" href="/style.css">
@@ -52,14 +53,20 @@ class: center, middle
 
 # Agenda
 
-TODO
+- Po co są nam testy mutacyjne?
+- Jak działają testy mutacyjne?
+- Przykładowe mutacje
+- Trochę słówek
+- Demo
+- Plusy i minusy
+- Czy warto i kiedy?
 
 ---
 class: center, middle
 
 # Quiz
 
-Kto słyszał o testach mutacyjnych?
+.question[Kto słyszał o testach mutacyjnych?]
 
 ---
 
@@ -67,7 +74,7 @@ class: center, middle
 
 # Quiz
 
-Kto korzystał z testów mutacyjnych?
+.question[Kto korzystał z testów mutacyjnych?]
 
 ---
 class: center, middle
@@ -331,7 +338,61 @@ class: center, middle
 
 # DEMO
 
+<!-- TODO AWARYJNE JAKBY NIE BYŁO NETA -->
 ---
+
+# Plusy i minusy testów mutacyjnych
+<table class="prosConsTable">
+  <tr>
+    <th>Plusy</th>
+    <th>Minusy</th>
+  </tr>
+  <tr>
+    <td>Pozwalają znaleźć słabe testy lub kod</td>
+    <td>Ponieważ są czasochłonne, można śmiało powiedzieć, że te testy nie mogą się odbyć bez narzędzia do automatyzacji</td>
+  </tr>
+  <tr>
+    <td>Wyniki mutacji mogą dać nam wyobrażenie o tym, jak użyteczne są nasze testy</td>
+    <td>Bycie w zgodzie z takimi testami zajmuje trochę czasu, przez co jest droższe</td>
+  </tr>
+  <tr>
+    <td>Możliwe jest wykrycie błędów, które są problematyczne do znalezienia przez zwykłe testowanie</td>
+    <td>ponieważ ta metoda zawiera zmiany w kodzie źródłowym, nie może być używana do testowania black-box</td>
+  </tr>
+</table>
+---
+
+#Dlaczego warto i kiedy je robić?
+
+.summaryCategories[Dlaczego:]
+- Poprawiają jakość naszego kodu
+
+- Możemy (w teorii) ufać naszym testą
+
+- Błędy znalezione jeszcze przed wyjściem na produkcję w piątek o 16
+
+.summaryCategories[Kiedy:]
+- Jako część CI/CD
+
+- Jako git hook 
+
+---
+class: center, middle
+
+# Dziękuję za uwagę!
+
+.left-column-33[<div>
+  <img src="/assets/moje500x500.jpg" class="bio myphoto">
+</div>]
+.left-column-66[<div>
+  <div class="thankyouData">Mikołaj Korbanek</div>
+  <div class="socials">Twitter: <a href="https://twitter.com/mikolajkorbanek">@mikolajkorbanek</a></div>
+  <div class="socials">LinkedIn: <a href="https://www.linkedin.com/in/mikolaj-korbanek/">@mikolaj-korbanek</a></div>
+  <div class="socials">e-Mail: <a href="mailto:mikolaj@korbanek.dev">mikolaj@korbanek.dev</a></div>
+
+</div>]
+
+
     </textarea>
     <script src="/remark.js">
     </script>

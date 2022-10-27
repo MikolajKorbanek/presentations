@@ -27,13 +27,13 @@
 .right-column ~ p { clear: both; }
 .right-column ~ ul { clear: both; }
 
-.exampleMutations {
+.exampleMutations, .prosConsTable {
     width: 100%;
     height: 75%;
     table-layout: fixed;
 }
 
-.exampleMutations td {
+.exampleMutations td, .prosConsTable td {
     text-align: center;
 }
 
@@ -41,7 +41,11 @@
     background-color: #f2f2f2;
 }
 
-.exampleMutations th {
+.prosConsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.exampleMutations th, .prosConsTable th {
     background-color: black;
     color: white;
 }
@@ -61,4 +65,18 @@
 
 .mutantSucceed {
     color: green;
+}
+
+.summaryCategories {
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: 'Yanone Kaffeesatz';
+}
+
+.thankyouData {
+    font-size: 3.5rem;
+}
+
+.socials, .question {
+    font-size: 1.5rem;
 }
