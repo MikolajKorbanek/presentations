@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Zmutowany.NET</title>
-    <meta charset="utf-8">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Poppins);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-      
-      body { font-family: 'Poppins'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Poppins'; }
-      
-    </style>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
 
-    <textarea id="source">
+<head>
+  <title>Zmutowany.NET</title>
+  <meta charset="utf-8">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Poppins);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+      font-family: 'Poppins';
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: normal;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Poppins';
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <textarea id="source">
 
 class: center, middle
 
@@ -236,7 +246,7 @@ class: center, middle
 
 # To zdefinujmy sobie test mutacyjny
 
-Mutacje to drobne, ale przemyślane zmiany w kodzie, które mają sprawdzić czy nasze testy dobrze testują nasz kod.
+Mutacje to drobne, ale przemyślane zmiany w kodzie *źródłowym*, które mają sprawdzić czy nasze testy dobrze testują nasz kod.
 
 **false-positive**
 
@@ -336,8 +346,6 @@ class: center, middle
 
 ???
 
-Pytanie do publiki
-
 Kiedy zmieniamy część programu poprzez testy mutacyjne, tworzymy alternatywną wersję  aplikacji, która jest nazywana mutantem. 
 Następnie testy sprawdzają to, a jeśli zestaw testów odrzuca mutanta (co, mamy nadzieję, robi), mówimy, że zabił mutanta.
 
@@ -346,28 +354,6 @@ class: center, middle
 
 # DEMO
 
-???
-
-Live coding
-- Pokazać stronę strykera
- - Że ma fajne introduciton
- - Instalacja strykera w projekcie
- - Że jest konfiguracja
-- Opowiedzenie o kodzie
-- Pokazanie, jakie mamy testy
-- Pokazanie pokrycia
-- Odpalenie Strykera
-- Pokazanie gdzie raport się generuje
-- Opis raportu
-- Ważne info, Stryker nie mutuje constów
-
-A co z Regexem?
-
-- Pokazać stronę
-- Pokazać test
-- Odpalić raport
-
-<!-- TODO AWARYJNE JAKBY NIE BYŁO NETA -->
 ---
 
 # Plusy i minusy testów mutacyjnych
@@ -378,7 +364,7 @@ A co z Regexem?
   </tr>
   <tr>
     <td>Pozwalają znaleźć słabe testy lub kod</td>
-    <td>Ponieważ są czasochłonne, można śmiało powiedzieć, że te testy nie mogą się odbyć bez narzędzia do automatyzacji</td>
+    <td>Ponieważ bazowo są czasochłonne, można śmiało powiedzieć, że te testy nie mogą się odbyć bez odpowiedniej konfiguracji</td>
   </tr>
   <tr>
     <td>Wyniki mutacji mogą dać nam wyobrażenie o tym, jak użyteczne są nasze testy</td>
@@ -386,7 +372,7 @@ A co z Regexem?
   </tr>
   <tr>
     <td>Możliwe jest wykrycie błędów, które są problematyczne do znalezienia przez zwykłe testowanie</td>
-    <td>ponieważ ta metoda zawiera zmiany w kodzie źródłowym, nie może być używana do testowania black-box</td>
+    <td>Ponieważ ta metoda zawiera zmiany w kodzie źródłowym, nie może być używana do testowania black-box</td>
   </tr>
 </table>
 ---
@@ -403,7 +389,9 @@ A co z Regexem?
 .summaryCategories[Kiedy:]
 - Jako część CI/CD
 
-- Jako git hook 
+- Jako git hook (przed pushem)
+
+- Jako wymaganie przed code review
 
 ---
 class: center, middle
@@ -423,12 +411,13 @@ class: center, middle
 
 
     </textarea>
-    <script src="./remark.js">
-    </script>
-    <script>
-var slideshow = remark.create({
-    ratio: '16:9'
-});
-    </script>
-  </body>
+  <script src="./remark.js">
+  </script>
+  <script>
+    var slideshow = remark.create({
+      ratio: '16:9'
+    });
+  </script>
+</body>
+
 </html>
